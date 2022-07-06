@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Stopwatch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- font-family: 'Roboto Slab', serif; -->
+
+    <link rel="stylesheet" href="/styles/style.css">
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+    
+    <div class="title"><h1>Online Stopwatch</h1></div>
+
+    <div class="set">
+        <div class="display" id="display">
+            <p class="timerDisplay" id="timerHrs">00</p> :
+            <p class="timerDisplay" id="timerMin">00</p> :
+            <p class="timerDisplay" id="timerSec">00</p> :
+            <p class="timerDisplay" id="timerMilisec">00</p>
+        </div>
+
+        <div class="all-buttons">
+            <button role="button" id="start">Start</button>
+            <button role="button" id="reset">Reset</button>
+            <button role="button" id="lap">Lap</button>
+        </div>
+
+        <div class="lap-container">
+            <div class="laps-title"><h2>Laps:</h2></div>
+            <div id="laps">
+                <p id="lapRecord"></p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./main.js"></script>
+
+</body>
+
+
+
+</html>

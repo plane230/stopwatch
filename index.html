@@ -11,7 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&display=swap" rel="stylesheet">
     <!-- font-family: 'Roboto Slab', serif; -->
 
-    <link rel="stylesheet" href="/styles/style.css">
+    <!-- https://fonts.google.com/specimen/Syne+Mono?category=Monospace&preview.text=00%20:%2000%20:%2000%20:%2000%20123456789&preview.text_type=custom#type-tester -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <!-- font-family: 'Syne Mono', monospace; -->
+    
+    <!-- <link rel="stylesheet" href="/styles/style.css"> -->
+    <link rel="stylesheet" href="/styles/main.css">
 
 
 
@@ -24,30 +31,39 @@
 
 <body>
     
-    <div class="title"><h1>Online Stopwatch</h1></div>
+    <main>
+        
+        <div class="title hidden"><h1>Lap Stopwatch</h1></div>
 
-    <div class="set">
-        <div class="display" id="display">
-            <p class="timerDisplay" id="timerHrs">00</p> :
-            <p class="timerDisplay" id="timerMin">00</p> :
-            <p class="timerDisplay" id="timerSec">00</p> :
-            <p class="timerDisplay" id="timerMilisec">00</p>
-        </div>
+    <div class="main">
 
-        <div class="all-buttons">
-            <button role="button" id="start">Start</button>
-            <button role="button" id="reset">Reset</button>
-            <button role="button" id="lap">Lap</button>
-        </div>
+        <div class="set">
+            <div class="display-all" id="display">
+                <p class="timerDisplay" id="timerHrs">00</p> :
+                <p class="timerDisplay" id="timerMin">00</p> :
+                <p class="timerDisplay" id="timerSec">00</p> :
+                <p class="timerDisplay" id="timerMilisec">000</p>
+            </div>
 
-        <div class="lap-container">
-            <div class="laps-title"><h2>Laps:</h2></div>
-            <div id="laps">
-                <p id="lapRecord"></p>
+            <div class="all-buttons">
+                <button class="button-class" role="button" id="start">Start</button>
+                <button class="button-class" role="button" id="reset">Reset</button>
+                <button class="button-class" role="button" id="lap">Lap</button>
+            </div>
+
+            <div class="lap-container">
+                <div class="laps-title hidden"><h2>Laps:</h2></div>
+                <div id="laps">
+                    <p id="lapRecord"></p>
+                </div>
             </div>
         </div>
+
     </div>
+
     
+    
+</main>
 
     <script src="./main.js"></script>
 

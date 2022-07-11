@@ -29,9 +29,10 @@ function start() {
     
     miliseconds++;
 
-    if (miliseconds < 10) displayMilisec = "0" + miliseconds.toString();
-    else displayMilisec = miliseconds;
-
+    if (miliseconds < 10) displayMilisec = "00" + miliseconds.toString();
+    else if (miliseconds < 100) displayMilisec = "0" + miliseconds.toString();
+    else displayMilisec = miliseconds; 
+    
     if (seconds < 10) displaySec = "0" + seconds.toString();
     else displaySec = seconds;
 
@@ -51,6 +52,7 @@ function start() {
 
             if (minutes / 60 === 1) {
                 hours++;
+                
                 minutes = 0;
             }
         }
@@ -81,7 +83,7 @@ function reset() {
     seconds = 0;
     minutes = 0;
     hours = 0;
-    timerMilisec.innerHTML = "00";
+    timerMilisec.innerHTML = "000";
     timerSec.innerHTML = "00";
     timerMin.innerHTML = "00";
     timerHrs.innerHTML = "00";
@@ -102,7 +104,7 @@ resetBtn.addEventListener('click', reset);
 lapsBtn.addEventListener('click', countClicks);
 
 let clickCount = 0;
-let clickLimit = 23;
+let clickLimit = 99;
 
 function countClicks() {
     if(clickCount <= clickLimit) {
